@@ -1,0 +1,208 @@
+.header-container {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  background-color: #FFFFFF;
+  padding: 12px 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  gap: 16px; /* Spacing between elements */
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 60px;
+}
+
+.menu-button {
+  background-color: #FFD100; /* Yellow color from image */
+  border: none;
+  border-radius: 6px;
+  padding: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px; /* Match input height */
+  width: 40px;
+}
+
+.menu-button svg {
+  stroke: #000000; /* Black lines for hamburger */
+}
+
+.search-area {
+  display: flex;
+  align-items: center;
+  border: 1px solid #D1D5DB; /* Light grey border for the combined input area */
+  border-radius: 6px;
+  overflow: hidden; /* To make inner borders work nicely */
+  flex-grow: 1; /* Allow search area to take available space */
+}
+
+.search-input-wrapper {
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  position: relative; /* For clear button positioning */
+  flex-grow: 1;
+  height: 40px;
+}
+
+.search-input-wrapper img { /* Search Icon */
+  margin-right: 12px;
+  color: #6B7280; 
+  /* Adjust size as needed */
+}
+
+.search-input-wrapper input {
+  border: none;
+  outline: none;
+  padding: 10px 0;
+  font-size: 1rem;
+  
+}
+
+.search-input-wrapper input::placeholder {
+  color: #9CA3AF;
+}
+
+.clear-button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin-left: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.clear-button svg {
+  color: #6B7280;
+}
+
+.city-selector-wrapper {
+  display: flex;
+  align-items: center;
+  border-left: 1px solid #D1D5DB; /* Separator line */
+  padding: 0 10px;
+  height: 40px; /* Match input height */
+  background-color: #F9FAFB; /* Slightly different background for selector part */
+  position: relative; /* For chevron positioning */
+
+}
+
+.city-selector-wrapper select {
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 10px 24px 10px 8px; /* Space for text and chevron */
+  font-size: 1rem;
+  color: #374151;
+  cursor: pointer;
+  appearance: none; /* Remove default browser dropdown arrow */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  min-width: 120px; /* Minimum width */
+}
+.city-selector-wrapper select:disabled {
+    color: #9CA3AF;
+}
+
+
+.city-selector-wrapper svg { /* Chevron Icon */
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none; /* Allows click through to the select */
+  color: #6B7280;
+}
+
+
+.search-button-primary {
+  background-color: #0B4C5F; /* Dark teal from image */
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 24px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  height: 40px; /* Match input height */
+  transition: background-color 0.2s ease;
+}
+
+.search-button-primary:hover {
+  background-color: #083B4A; /* Slightly darker teal on hover */
+}
+
+.register-button {
+  background-color: #FFFFFF;
+  color: #0B4C5F; /* Dark teal text */
+  border: 1px solid #0B4C5F; /* Dark teal border */
+  border-radius: 6px;
+  padding: 8px 16px; /* Adjust padding to match height with other buttons */
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Space between icon and text */
+  height: 40px; /* Match input height */
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.register-button svg {
+  stroke: #0B4C5F; /* Icon color */
+}
+
+.register-button:hover {
+  background-color: #F0F7F9; /* Light tealish background on hover */
+}
+
+/* For smaller screens, you might want to stack elements or hide some */
+@media (max-width: 900px) {
+  .header-container {
+    flex-wrap: wrap; /* Allow wrapping */
+    justify-content: center; /* Center items when wrapped */
+    width: 95%;
+  }
+  .search-area {
+    width: 100%; /* Make search area take full width on small screens */
+    order: 3; /* Change order if needed */
+    margin-top: 10px;
+  }
+  .search-button-primary {
+    order: 4;
+    flex-grow: 1; /* Allow search button to grow */
+     margin-top: 10px;
+  }
+  .register-button {
+    order: 2; /* Example of reordering */
+  }
+  .logo {
+      order: 0;
+  }
+  .menu-button {
+      order: 1;
+  }
+}
+
+@media (max-width: 600px) {
+    .search-input-wrapper input {
+        min-width: 100px;
+    }
+    .city-selector-wrapper select {
+        min-width: 100px;
+    }
+    .search-button-primary {
+        padding: 10px 15px;
+    }
+    .register-button {
+        padding: 8px 10px;
+    }
+}

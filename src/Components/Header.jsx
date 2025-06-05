@@ -1,0 +1,61 @@
+import { useState } from 'react';
+import './header.css';
+import Logo from '../assets/logo.svg';
+import BurgerMenu from '../assets/burgerMenu.svg';
+import User from '../assets/profile-circle.svg';
+import SearchIcon from '../assets/search.svg';
+import ArrowDown from '../assets/arrow-down.svg';
+
+function Header() {
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCity, setSelectedCity] = useState('');
+
+  return (
+      <header className="header-container">
+        <div className="logo">
+          <img src={Logo} />
+        </div>
+        <button className="menu-button">
+          <img src={BurgerMenu} />
+        </button>
+        <div className="search-area">
+          <div className="search-input-wrapper">
+            <img src={SearchIcon} alt="ss" />
+            <input
+              type="text"
+              placeholder="Axtar"
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+            />
+            {searchTerm && (
+              <button className="clear-button" onClick={() => setSearchTerm('')}>
+                <p>.</p>
+              </button>
+            )}
+          </div>
+          <div className="city-selector-wrapper">
+            <select
+              value={selectedCity}
+              onChange={(e) => setSelectedCity(e.target.value)}
+            >
+              <option value="" disabled>Şəhər seçin</option>
+              <option value="baku">Bakı</option>
+              <option value="ganja">Gəncə</option>
+              <option value="sumqayit">Sumqayıt</option>
+            </select>
+           <img src={ArrowDown} alt="arrow-down" />
+          </div>
+        </div>
+        <button className="search-button-primary">Axtar</button>
+        <button className="register-button">
+          Daxil Ol
+        </button>
+        <button className="register-button">
+          <img src={User} />
+          Qeydiyyat
+        </button>
+      </header>
+  );
+}
+
+export default Header;
