@@ -1,12 +1,13 @@
 .header-container {
-  width: 90%;
+  width: 93%;
   display: flex;
   align-items: center;
   background-color: #FFFFFF;
   padding: 12px 20px;
   border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  gap: 16px; /* Spacing between elements */
+  gap: 16px;
+  position: absolute;
+  top:30px ;
 }
 
 .logo {
@@ -17,7 +18,7 @@
 }
 
 .menu-button {
-  background-color: #FFD100; /* Yellow color from image */
+  background-color: #FFD100;
   border: none;
   border-radius: 6px;
   padding: 10px;
@@ -25,36 +26,35 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 40px; /* Match input height */
+  height: 40px;
   width: 40px;
 }
 
 .menu-button svg {
-  stroke: #000000; /* Black lines for hamburger */
+  stroke: #000000;
 }
 
 .search-area {
   display: flex;
   align-items: center;
-  border: 1px solid #D1D5DB; /* Light grey border for the combined input area */
+  border: 1px solid #D1D5DB;
   border-radius: 6px;
-  overflow: hidden; /* To make inner borders work nicely */
-  flex-grow: 1; /* Allow search area to take available space */
+  overflow: hidden;
+  flex-grow: 1;
 }
 
 .search-input-wrapper {
   display: flex;
   align-items: center;
   padding: 0 10px;
-  position: relative; /* For clear button positioning */
+  position: relative;
   flex-grow: 1;
   height: 40px;
 }
 
-.search-input-wrapper img { /* Search Icon */
+.search-input-wrapper img {
   margin-right: 12px;
-  color: #6B7280; 
-  /* Adjust size as needed */
+  color: #6B7280;
 }
 
 .search-input-wrapper input {
@@ -62,7 +62,6 @@
   outline: none;
   padding: 10px 0;
   font-size: 1rem;
-  
 }
 
 .search-input-wrapper input::placeholder {
@@ -87,44 +86,41 @@
 .city-selector-wrapper {
   display: flex;
   align-items: center;
-  border-left: 1px solid #D1D5DB; /* Separator line */
+  border-left: 1px solid #D1D5DB;
   padding: 0 10px;
-  height: 40px; /* Match input height */
-  background-color: #F9FAFB; /* Slightly different background for selector part */
-  position: relative; /* For chevron positioning */
-
+  height: 40px;
+  background-color: #F9FAFB;
+  position: relative;
 }
 
 .city-selector-wrapper select {
   border: none;
   outline: none;
   background: transparent;
-  padding: 10px 24px 10px 8px; /* Space for text and chevron */
+  padding: 10px 24px 10px 8px;
   font-size: 1rem;
   color: #374151;
   cursor: pointer;
-  appearance: none; /* Remove default browser dropdown arrow */
+  appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
-  min-width: 120px; /* Minimum width */
+  min-width: 120px;
 }
 .city-selector-wrapper select:disabled {
     color: #9CA3AF;
 }
 
-
-.city-selector-wrapper svg { /* Chevron Icon */
+.city-selector-wrapper svg {
   position: absolute;
   right: 10px;
   top: 50%;
   transform: translateY(-50%);
-  pointer-events: none; /* Allows click through to the select */
+  pointer-events: none;
   color: #6B7280;
 }
 
-
 .search-button-primary {
-  background-color: #0B4C5F; /* Dark teal from image */
+  background-color: #0B4C5F;
   color: white;
   border: none;
   border-radius: 6px;
@@ -132,57 +128,56 @@
   font-size: 1rem;
   font-weight: 500;
   cursor: pointer;
-  height: 40px; /* Match input height */
+  height: 40px;
   transition: background-color 0.2s ease;
 }
 
 .search-button-primary:hover {
-  background-color: #083B4A; /* Slightly darker teal on hover */
+  background-color: #083B4A;
 }
 
 .register-button {
   background-color: #FFFFFF;
-  color: #0B4C5F; /* Dark teal text */
-  border: 1px solid #0B4C5F; /* Dark teal border */
+  color: #0B4C5F;
+  border: 1px solid #0B4C5F;
   border-radius: 6px;
-  padding: 8px 16px; /* Adjust padding to match height with other buttons */
+  padding: 8px 16px;
   font-size: 1rem;
   font-weight: 500;
   cursor: pointer;
   display: flex;
   align-items: center;
-  gap: 8px; /* Space between icon and text */
-  height: 40px; /* Match input height */
+  gap: 8px;
+  height: 40px;
   transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 .register-button svg {
-  stroke: #0B4C5F; /* Icon color */
+  stroke: #0B4C5F;
 }
 
 .register-button:hover {
-  background-color: #F0F7F9; /* Light tealish background on hover */
+  background-color: #F0F7F9;
 }
 
-/* For smaller screens, you might want to stack elements or hide some */
 @media (max-width: 900px) {
   .header-container {
-    flex-wrap: wrap; /* Allow wrapping */
-    justify-content: center; /* Center items when wrapped */
+    flex-wrap: wrap;
+    justify-content: center;
     width: 95%;
   }
   .search-area {
-    width: 100%; /* Make search area take full width on small screens */
-    order: 3; /* Change order if needed */
+    width: 100%;
+    order: 3;
     margin-top: 10px;
   }
   .search-button-primary {
     order: 4;
-    flex-grow: 1; /* Allow search button to grow */
-     margin-top: 10px;
+    flex-grow: 1;
+    margin-top: 10px;
   }
   .register-button {
-    order: 2; /* Example of reordering */
+    order: 2;
   }
   .logo {
       order: 0;
