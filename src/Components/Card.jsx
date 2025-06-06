@@ -10,7 +10,7 @@ const CardWithHeader = () => {
       
       {/* Sizin əlavə etdiyiniz yuxarı hissə (header) */}
       <div className="categories-hero">
-        <h2>Kateqoriyalar</h2>
+        <h2>Ustalarimiz</h2>
         {/* Inline style əvəzinə CSS class-ı istifadə etmək daha məsləhətlidir */}
         <a href="#" className="see-more-link">
           <span>Daha Çox</span>
