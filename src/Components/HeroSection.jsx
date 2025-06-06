@@ -3,7 +3,7 @@ import './hero.css';
 
 function HeroSection() {
   return (
-    <div className="hero-container">
+    <section className="hero-container">
       <div className="hero-overlay">
         <div className="hero-content">
           <h1>İşinin peşəkarını axtarırsınız?</h1>
@@ -11,7 +11,7 @@ function HeroSection() {
           <button className="hero-button">Peşəkarlarla tanış ol</button>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 

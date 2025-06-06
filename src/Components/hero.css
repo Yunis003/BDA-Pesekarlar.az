@@ -1,14 +1,12 @@
 .hero-container {
     position: relative;
     width: 100%;
-    height: 500px;
+    height: 2700px;
     background-image: url('../assets/Hero.svg');
-    background-size: cover;
-    background-position: center;
+   background-repeat: no-repeat ;
     display: flex;
     color: white;
     filter: brightness(1.6);
-
 }
 
 .hero-overlay {
