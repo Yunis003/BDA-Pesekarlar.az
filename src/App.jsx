@@ -9,7 +9,7 @@ function App() {
   return (
     <div className="wrapper">
       <Header />
-      {/* <HeroSection /> */}
+      <HeroSection />
       <Categories />
       <Flags />
       <Card />
