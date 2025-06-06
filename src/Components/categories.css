@@ -25,13 +25,13 @@
     row-gap: 20px;
     .category1{
         border-radius: 10px;
-        width: 360px;
+        width: 420px;
         height: 170px;
         background-color: #FFF;
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 60px;
+        gap: 75px;
         img{
             width: 55px;
         }
