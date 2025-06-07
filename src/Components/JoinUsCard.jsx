@@ -1,10 +1,8 @@
-import React from 'react';
-import './join.css'; // Stil faylını import edirik
-import professionalsImage from '../assets/join.svg'; // Şəkli import edirik
+import './join.css';
+import professionalsImage from '../assets/join.svg';
 
 const JoinUsCard = () => {
   return (
-    
       <div className="join-us-card">
         <div className="join-us-content">
           <h2 className="join-us-title">

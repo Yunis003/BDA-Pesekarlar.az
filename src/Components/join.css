@@ -1,21 +1,14 @@
-/* Əvvəlki nümunədəki kimi Google Fonts-dan istifadə edə bilərsiniz */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
-
-/* Ümumi konteyner üçün body stilləri (əvvəlki nümunədən) */
-
-
 .join-us-card {
-    width: 90%;
+  width: 90%;
   display: flex;
   align-items: center;
-  background-color: #fdc948; /* Sarı arxa fon */
+  background-color: #fdc948;
   border-radius: 20px;
   padding: 40px 60px;
   position: relative;
   overflow: hidden;
 }
 
-/* Arxa fondakı dalğalı xətlər */
 .join-us-card::before {
   content: '';
   position: absolute;
@@ -34,19 +27,19 @@
 .join-us-content {
   flex: 1;
   position: relative;
-  z-index: 2; /* Məzmunun arxa fondakı xətlərin üzərində olması üçün */
+  z-index: 2;
 }
 
 .join-us-image-container {
   flex: 1;
   display: flex;
   justify-content: flex-end;
-  align-items: flex-end; /* Şəkli aşağıya yerləşdirir */
+  align-items: flex-end;
   position: relative;
   z-index: 2;
-  align-self: flex-end; /* Konteynerin aşağısına yapışdırır */
-  margin-right: -90px; /* Şəklin bir hissəsini sağa çıxarır */
-  margin-bottom: -55px; /* Şəkli aşağı çıxarır */
+  align-self: flex-end;
+  margin-right: -90px;
+  margin-bottom: -55px;
 }
 
 .professionals-image {
@@ -100,7 +93,7 @@
   font-weight: 500;
   border-radius: 0 12px 12px 0;
   cursor: pointer;
-  white-space: nowrap; /* "Qeydiyyatdan keç" mətninin qırılmaması üçün */
+  white-space: nowrap;
   transition: background-color 0.3s ease;
 }
 
@@ -108,54 +101,52 @@
   background-color: #0a4650;
 }
 
-
-/* Responsiv dizayn */
 @media (max-width: 992px) {
   .join-us-card {
-    flex-direction: column;
-    padding: 30px;
-    text-align: center;
+  flex-direction: column;
+  padding: 30px;
+  text-align: center;
   }
 
   .join-us-image-container {
-    order: 1; /* Şəkil yuxarıda */
-    margin: -50px 0 20px 0; /* Boşluqları tənzimləyirik */
-    align-self: center;
+  order: 1;
+  margin: -50px 0 20px 0;
+  align-self: center;
   }
   
   .professionals-image {
-    max-width: 300px;
+  max-width: 300px;
   }
 
   .join-us-content {
-    order: 2; /* Mətn aşağıda */
+  order: 2;
   }
 
   .join-us-form {
-    margin: 0 auto; /* Formu mərkəzə gətirir */
+  margin: 0 auto;
   }
 }
 
 @media (max-width: 480px) {
   .join-us-title {
-    font-size: 28px;
+  font-size: 28px;
   }
   
   .join-us-form {
-    flex-direction: column;
-    background-color: transparent;
-    box-shadow: none;
-    gap: 10px;
-    max-width: 100%;
+  flex-direction: column;
+  background-color: transparent;
+  box-shadow: none;
+  gap: 10px;
+  max-width: 100%;
   }
 
   .join-us-form input {
-    border-radius: 12px;
-    background-color: #fff;
-    text-align: center;
+  border-radius: 12px;
+  background-color: #fff;
+  text-align: center;
   }
 
   .join-us-form button {
-    border-radius: 12px;
+  border-radius: 12px;
   }
 }

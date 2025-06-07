@@ -1,28 +1,23 @@
-/* Google Fonts-dan istifadə etmək daha yaxşı görünüş verə bilər (opsional) */
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&display=swap');
 
-/* Bütün komponenti saxlayan konteyner */
 .component-container {
-  width: 90%; /* Kartın eni ilə eyni və ya daha geniş ola bilər */
-  font-family: 'Nunito Sans', sans-serif; /* Şrift */
+  width: 90%;
+  
 }
 
 .main-profiles{
     width: 100%;
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap; /* Kartların sətir-sətir düzülməsi */
-     /* Kartlar arasında boşluq */
+    flex-wrap: wrap;
     align-items:center;
     row-gap: 20px ;
-
 }
-/* YENİ ƏLAVƏ OLUNAN HİSSƏ ÜÇÜN STİLLƏR */
+
 .categories-hero {
   display: flex;
-  justify-content: space-between; /* Elementləri kənarlara yaslayır */
-  align-items: center; /* Vertikal olaraq ortalayır */
-  margin-bottom: 20px; /* Başlıqla kart arasında boşluq */
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
 .categories-hero h2 {
@@ -34,7 +29,7 @@
 .see-more-link {
   display: flex;
   align-items: center;
-  gap: 8px; /* Yazı ilə ikon arasında boşluq */
+  gap: 8px;
   text-decoration: none;
   color:#111827;
   font-weight: 600;
@@ -48,12 +43,11 @@
 }
 
 .see-more-link:hover .arrow-icon {
-    transform: translateX(3px); /* Hover zamanı kiçik effekt */
+    transform: translateX(3px);
 }
 
-/* Əvvəlki Kart Stilləri (Dəyişiklik yoxdur) */
 .profile-card {
-  width: 420px; /* Konteynerin eninə tam uyğunlaşır */
+  width: 33%;
   background-color: #ffffff;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
