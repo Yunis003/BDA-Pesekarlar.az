@@ -1,136 +1,123 @@
-/* src/InfiniteCarousel.css */
-
 .testimonial-section {
-  padding: 60px 0; /* Üstdən və altdan boşluq */
-  width: 90%;
-  background-color: #f8f9fa;
-  overflow-x: hidden;
+    padding: 60px 0;
+    width: 90%;
+    background-color: #f8f9fa;
+    overflow-x: hidden;
 }
 
 .testimonial-header {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  margin-bottom: 40px;
-  h2{
-    font-size: 2rem;
-  }
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    margin-bottom: 40px;
+    h2{
+        font-size: 2rem;
+    }
 }
 
 .testimonial-title {
-  font-size: 28px;
-  color: #343a40;
+    font-size: 28px;
+    color: #343a40;
 }
 
-/* KARUSELİN ƏSAS STİLLƏRİ */
-
 .carousel-container {
-  overflow: hidden; /* Əsas sehr budur: lent kənara çıxdıqda gizlədir */
-  width: 100%;
-  position: relative;
-  /* Kənarlarda solğunlaşma effekti üçün (optional, but looks good) */
-  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
-  mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+    mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
 }
 
 .carousel-track {
-  display: flex; /* Bütün qutuları yan-yana düzür */
-  /* Qutuların ümumi enini hesablayırıq (qutu_eni * qutu_sayı * 2) */
-  /* Məsələn: 350px * 4 qutu * 2 (çünki təkrarlanır) = 2800px */
-  width: calc(350px * 8); 
-  animation: scroll 40s linear infinite; /* Animasiyanı tətbiq edirik */
+    display: flex;
+    width: calc(350px * 8);
+    animation: scroll 40s linear infinite;
 }
 
-/* Mouse ilə üzərinə gəldikdə animasiyanı dayandırmaq üçün */
 .carousel-container:hover .carousel-track {
-  animation-play-state: paused;
+    animation-play-state: paused;
 }
 
-/* ANİMASİYA KEYFRAMES */
 @keyframes scroll {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    /* Lent eninin yarısı qədər sola sürüşdürürük. 
-       Bu, animasiyanın qırılmadan təkrarlanmasını təmin edir. */
-    transform: translateX(-50%);
-  }
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
 }
 
-/* RƏY QUTUSU VƏ İÇİNDƏKİLƏR */
 .testimonial-box {
-  background-color: #ffffff;
-  border: 1px solid #e9ecef;
-  border-radius: 12px;
-  padding: 25px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
-  display: flex;
-  flex-direction: column;
-  width: 320px; /* Hər qutunun sabit eni */
-  margin: 0 15px; /* Qutular arası məsafə */
-  flex-shrink: 0; /* Qutuların ölçüsünün dəyişməsinin qarşısını alır */
+    background-color: #ffffff;
+    border: 1px solid #e9ecef;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+    display: flex;
+    flex-direction: column;
+    width: 320px;
+    margin: 0 15px;
+    flex-shrink: 0;
 }
 
 .author-info {
-  display: flex;
-  align-items: flex-start; /* Düzülüşü yuxarıdan başlamaq üçün */
-  margin-bottom: 15px;
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 15px;
 }
 
 .author-image {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  margin-right: 15px;
-  flex-shrink: 0;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 15px;
+    flex-shrink: 0;
 }
 
-/* Ulduzları və ad/vəzifəni saxlayan yeni konteyner */
 .author-content-wrapper {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 
 .author-details {
-  margin-bottom: 8px; /* Ad/vəzifə ilə ulduzlar arası məsafə */
+    margin-bottom: 8px;
 }
 
 .author-name {
-  font-size: 18px;
-  font-weight: bold;
-  margin: 0;
-  color: #212529;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+    color: #212529;
 }
 
 .author-role {
-  font-size: 14px;
-  color: #6c757d;
-  margin: 0;
+    font-size: 14px;
+    color: #6c757d;
+    margin: 0;
 }
 
 .star-rating {
-  color: #ffc107;
+    color: #ffc107;
 }
 
 .star {
-  font-size: 18px;
+    font-size: 18px;
 }
 
 .testimonial-quote {
-  font-size: 16px;
-  color: #495057;
-  flex-grow: 1;
-  line-height: 1.6;
-  margin-bottom: 15px;
-  border-top: 1px solid #f1f1f1; /* Sitatı ayırmaq üçün incə xətt */
-  padding-top: 15px;
+    font-size: 16px;
+    color: #495057;
+    flex-grow: 1;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    border-top: 1px solid #f1f1f1;
+    padding-top: 15px;
 }
 
 .testimonial-date {
-  font-size: 13px;
-  color: #6c757d;
-  margin-top: auto;
-  text-align: right;
+    font-size: 13px;
+    color: #6c757d;
+    margin-top: auto;
+    text-align: right;
 }
