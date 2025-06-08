@@ -11,47 +11,47 @@ const Categories = () => {
   return (
     <section className='categories'>
         <div className="categories-hero">
-            <h2>Kateqoriyalar</h2>
+            <h2 style={{fontSize: "2rem"}}>Kateqoriyalar</h2>
             <p style={{ display: "flex", alignItems:"center", gap:"10px" }}>Daha Cox <img src={arrow} alt="arrow-right" style={{ rotate:"-90deg", width:"20px" }} /></p>
         </div>
         <div className="main-categories">
             <div className="category1">
-                <img src={table} alt="Category 1" />
+                <img src={table} alt="Category 1" className='category-img' />
                 <div className="worker-data">
                 <h2>Mebel yığımı</h2>
                 <p>90+ Usta</p>
                 </div>
             </div>
             <div className="category1">
-                <img src={paint} alt="Category 2" />
+                <img src={paint} alt="Category 2" className='category-img' />
                 <div className="worker-data">
                 <h2>Rəngsaz</h2>
                 <p>150+ Usta</p>
                 </div>
             </div>
             <div className="category1">
-                <img src={bor} alt="Category 3" />
+                <img src={bor} alt="Category 3" className='category-img' />
                 <div className="worker-data">
                 <h2>Santexnik</h2>
                 <p>400+ Usta</p>
                 </div>
             </div>
             <div className="category1">
-                <img src={mdi} alt="Category 4" />
+                <img src={mdi} alt="Category 4" className='category-img' />
                 <div className="worker-data">
                 <h2>Təmir və tikinti</h2>
                 <p>360+ Usta</p>
                 </div>
             </div>
             <div className="category1">
-                <img src={maki} alt="Category 3" />
+                <img src={maki} alt="Category 3" className='category-img' />
                 <div className="worker-data">
                 <h2>Mexanik</h2>
                 <p>760+ Usta</p>
                 </div>
             </div>
             <div className="category1">
-                <img src={sicon} alt="Category 4" />
+                <img src={sicon} alt="Category 4" className='category-img' />
                 <div className="worker-data">
                 <h2>Derzi</h2>
                 <p>566+ Usta</p>

@@ -4,6 +4,7 @@ import Categories from './Components/Categories';
 import Flags from './Components/Flags';
 import Card from './Components/Card';
 import JoinUsCard from './Components/JoinUsCard';
+import Comments from './Components/Comments';
 import './App.css';
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Categories />
       <Flags />
       <Card />
+      <Comments />
       <JoinUsCard />
       {/* <Footer /> */}
     </div>

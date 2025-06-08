@@ -56,9 +56,6 @@
   border: 1px solid #e0e0e0;
 }
 
-.profile-card:hover {
-  transform: translateY(-5px);
-}
 
 .card-image-container {
   width: 100%;

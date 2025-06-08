@@ -11,10 +11,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    h2{
-        font-size: 2rem;
-        color: #333;
-    }
+}
+.categories-hero h2{
+    font-size: 2rem;
+    color: #333;
+    font-weight: 700;
 }
 .main-categories{
     width: 100%;
@@ -46,4 +47,21 @@
         font-size: 14px;
         color: #555;
     }
+}
+
+.category1:hover {
+    background-color: #296e96;
+  transform: translateY(-5px);
+  cursor: pointer;
+}
+
+.category1:hover .worker-data p{
+    color: #FFF;
+  }
+  .category1:hover .worker-data h2{
+    color: #FFF;
+  }
+
+.category1:hover .category-img {
+  filter: brightness(0) invert(1);
 }
