@@ -6,6 +6,7 @@ import Card from './Components/Card';
 import JoinUsCard from './Components/JoinUsCard';
 import Comments from './Components/Comments';
 import StatsBanner from './Components/StatsBanner';
+import Footer from './Components/Footer';
 import './App.css';
 function App() {
   return (
@@ -18,7 +19,7 @@ function App() {
       <StatsBanner />
       <Comments />
       <JoinUsCard />
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 }
