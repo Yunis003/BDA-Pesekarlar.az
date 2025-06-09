@@ -1,7 +1,6 @@
-import React from 'react';
 import './comments.css';
 import arrow from '../assets/arrow-down.svg';
-
+import comImg from '../assets/image.svg'; // Assuming comImg is a local image
 const testimonials = [
     {
         id: 1,
@@ -10,7 +9,7 @@ const testimonials = [
         quote: 'Çox məmnun qaldım. Peşəkar və sürətli xidmət göstərdilər.',
         date: '02 İyun 2025',
         rating: 5,
-        image: 'https://via.placeholder.com/100'
+        image: comImg
     },
     {
         id: 2,
@@ -19,7 +18,7 @@ const testimonials = [
         quote: 'Əla iş. Vaxtında və keyfiyyətli xidmət.',
         date: '22 Aprel 2025',
         rating: 5,
-        image: 'https://via.placeholder.com/100'
+        image: comImg
     },
     {
         id: 3,
@@ -28,7 +27,7 @@ const testimonials = [
         quote: 'Komandanızla işləmək çox xoş idi. Təklif edirəm!',
         date: '10 May 2025',
         rating: 5,
-        image: 'https://via.placeholder.com/100'
+        image: comImg
     },
     {
         id: 4,
@@ -37,7 +36,7 @@ const testimonials = [
         quote: 'Gözləntilərimi tam qarşıladı. Təşəkkürlər!',
         date: '15 Mart 2025',
         rating: 4,
-        image: 'https://via.placeholder.com/100'
+        image: comImg
     }
 ];
 

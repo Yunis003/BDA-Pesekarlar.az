@@ -53,7 +53,14 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   transition: transform 0.2s ease-in-out;
-  border: 1px solid #e0e0e0;
+
+  &:hover{
+    border: 1px solid #111827;
+  }
+
+  &:hover .card-rating{
+    background-color: #469dcf;
+  }
 }
 
 
@@ -109,7 +116,7 @@
 .card-rating {
   display: flex;
   align-items: center;
-  border: 1px solid #d1d5db;
+  border: 1px solid #469dcf;
   border-radius: 8px;
   padding: 8px 12px;
   font-size: 16px;
@@ -117,6 +124,7 @@
   color: #2d3748;
   flex-shrink: 0;
 }
+
 
 .star-icon {
   margin-right: 8px;
