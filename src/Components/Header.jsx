@@ -5,19 +5,25 @@ import BurgerMenu from '../assets/burgerMenu.svg';
 import User from '../assets/profile-circle.svg';
 import SearchIcon from '../assets/search.svg';
 import ArrowDown from '../assets/arrow-down.svg';
+import BurgerMenuOverlay from './BurgerMenu';
 
 function Header() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCity, setSelectedCity] = useState('');
+  const [isMenuOpen, setIsMenuOpen] = useState(false); 
+
+  const toggleMenu = () => { 
+    setIsMenuOpen(!isMenuOpen);
+  };
 
   return (
       <header className="header-container">
         <div className="logo">
           <img src={Logo} />
         </div>
-        <button className="menu-button">
-          <img src={BurgerMenu} />
-        </button>
+        <button className="menu-button" onClick={toggleMenu}> 
+        <img src={BurgerMenu} alt="Menu" />
+      </button>
         <div className="search-area">
           <div className="search-input-wrapper">
             <img src={SearchIcon} alt="ss" />
@@ -54,6 +60,7 @@ function Header() {
           <img src={User} />
           Qeydiyyat
         </button>
+        <BurgerMenuOverlay isOpen={isMenuOpen} onClose={toggleMenu} />
       </header>
   );
 }

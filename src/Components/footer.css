@@ -1,9 +1,7 @@
-/* src/Footer.css */
-
 .site-footer {
-    width: 100%;
-  background-color: #1e4966; /* Şəkildəki kimi tünd göy rəng */
-  color: #cdd4da; /* Açıq boz mətn rəngi */
+  width: 100%;
+  background-color: #1e4966;
+  color: #cdd4da;
   padding: 50px 0 20px 0;
 }
 
@@ -15,17 +13,17 @@
 .footer-content {
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap; /* Kiçik ekranlarda sütunların aşağı düşməsi üçün */
+  flex-wrap: wrap;
   padding-bottom: 30px;
 }
 
 .footer-column {
-  flex: 1; /* Sütunların bərabər yer tutmasını təmin edir */
-  min-width: 250px; /* Sütunların çox kiçilməsinin qarşısını alır */
+  flex: 1;
+  min-width: 250px;
 }
 
 .footer-title {
-  color: #ffffff; /* Başlıqların rəngi tam ağ */
+  color: #ffffff;
   font-size: 20px;
   margin-bottom: 20px;
   font-weight: 600;
@@ -36,7 +34,6 @@
   max-width: 300px;
 }
 
-/* Sosial Media İkonları */
 .social-icons {
   margin-top: 20px;
 }
@@ -51,10 +48,9 @@
 }
 
 .social-icons a:hover {
-  color: #ffffff; /* Hover zamanı ikonların rəngi */
+  color: #ffffff;
 }
 
-/* Əlaqə Məlumatları */
 .contact-list {
   list-style: none;
   padding: 0;
@@ -69,30 +65,28 @@
 
 .contact-list svg {
   margin-right: 12px;
-  flex-shrink: 0; /* İkonların ölçüsünün dəyişməsinin qarşısını alır */
+  flex-shrink: 0;
 }
 
-/* Alt hissə (Copyright) */
 .footer-bottom {
   text-align: center;
   padding-top: 20px;
-  border-top: 1px solid #3a6b8e; /* Ayırıcı xətt */
+  border-top: 1px solid #3a6b8e;
   font-size: 14px;
 }
 
-/* RESPONSİV DİZAYN */
 @media (max-width: 768px) {
   .footer-content {
-    flex-direction: column; /* Sütunları alt-alta düzür */
-    text-align: center; /* Mətnləri mərkəzləşdirir */
+  flex-direction: column;
+  text-align: center;
   }
 
   .footer-description {
-    margin-left: auto;
-    margin-right: auto;
+  margin-left: auto;
+  margin-right: auto;
   }
   
   .contact-list li {
-    justify-content: center; /* Əlaqə məlumatlarını mərkəzləşdirir */
+  justify-content: center;
   }
 }
