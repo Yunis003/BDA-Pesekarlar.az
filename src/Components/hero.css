@@ -1,13 +1,23 @@
+/* src/components/hero.css */
+
 .hero-container {
     position: relative;
     width: 100%;
     height: 400px;
-    background-image: url('../assets/Hero.svg');
-    background-size: cover;
-   background-repeat: no-repeat ;
-    display: flex;
-    color: white;
-    filter: brightness(1.6);
+    
+    color: white; /* Video üzərində ümumi mətn rəngi */
+    overflow: hidden;
+}
+
+.hero-background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    filter: brightness(1.3); /* Videonu biraz tündləşdirmək üçün */
 }
 
 .hero-overlay {
@@ -16,15 +26,27 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: flex;
+    background-color: rgba(0, 0, 0, 0.4); /* Videonu daha da qaraltmaq üçün yüngül qara overlay */
+    /* display: flex;
     align-items: center;
+    justify-content: flex-start; */
+    z-index: 1;
 }
 
 .hero-content {
-    padding-left: 5%;
-    max-width: 600px;
-    z-index: 1;
+    z-index: 2;
+    position: relative;
+
+    /* Dəyişikliklər buradadır */
+    background-color: rgba(255, 255, 255, 0.514); /* Çox şəffaf ağ fon (20% şəffaflıq) */
+    padding: 30px; /* Məzmunun ətrafında boşluq */
+    height: 100%;     
+    max-width: 650px;
+    display: flex;
+    justify-content: center;
+    
+    flex-direction: column;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Kontainerə yüngül kölgə */
 }
 
 .hero-content h1 {
@@ -33,14 +55,16 @@
     margin-top: 0;
     margin-bottom: 15px;
     line-height: 1.2;
-    color: black;
+    color: black; /* SÖZLƏR QARA RƏNGDƏ */
+    text-shadow: none; /* Ağ fonda kölgəyə ehtiyac yoxdur */
 }
 
 .hero-content p {
     font-size: 1.3rem;
     margin-bottom: 25px;
     max-width: 490px;
-    color: black;
+    color: black; /* SÖZLƏR QARA RƏNGDƏ */
+    text-shadow: none; /* Ağ fonda kölgəyə ehtiyac yoxdur */
 }
 
 .hero-button {
@@ -52,6 +76,7 @@
     font-weight: 500;
     border-radius: 4px;
     cursor: pointer;
+    width: 220px;
     transition: background-color 0.3s ease;
 }
 
@@ -62,14 +87,16 @@
 @media (max-width: 768px) {
     .hero-container {
         height: 350px;
-    }
-    .hero-content {
-        padding-left: 20px;
-        padding-right: 20px;
-        text-align: center;
+        justify-content: center; /* Mobil görünüşdə mərkəzlənsin */
     }
     .hero-overlay {
-         justify-content: center;
+        justify-content: center; /* Mobil görünüşdə mərkəzlənsin */
+    }
+    .hero-content {
+        padding: 20px; /* Mobil görünüşdə paddingi tənzimləyirik */
+        margin-left: 0; /* Mobil görünüşdə margin-left sıfırlansın */
+        text-align: center; /* Mobil görünüşdə mətn mərkəzlənsin */
+        background-color: rgba(255, 255, 255, 0.9); /* Mobil görünüşdə daha az şəffaf ağ fon */
     }
     .hero-content h1 {
         font-size: 2rem;

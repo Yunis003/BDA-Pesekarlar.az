@@ -155,7 +155,11 @@
 }
 
 .register-button:hover {
-  background-color: #F0F7F9;
+  background-color: #0B4C5F;
+  color: #FFF;
+  > img{
+    filter: brightness(2.2);
+  }
 }
 
 @media (max-width: 900px) {
