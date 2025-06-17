@@ -30,15 +30,17 @@
 .hero-content {
     z-index: 2;
     position: relative;
-    background: linear-gradient(to right, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.5));
-    /* background-color: rgba(255, 255, 255, 0.514); */
+    /* Fonun 80%-ə qədər sabit qalıb, sonra şəffaflaşmasını təmin edən gradient */
+    background: linear-gradient(to right,
+        rgba(255, 255, 255, 0.6) 90%,
+        rgba(255, 255, 255, 0.3) 100%);
     padding: 30px;
     height: 100%;
     max-width: 750px;
     display: flex;
     justify-content: center;
     flex-direction: column;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .hero-content h1 {
