@@ -1,4 +1,5 @@
 import './hero.css';
+import HeroImg from '../assets/Hero.png';
 
 import heroBackgroundVideo from '../assets/headervid.mp4'; 
 
