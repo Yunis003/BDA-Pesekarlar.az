@@ -1,31 +1,26 @@
-/* src/components/BurgerMenuOverlay.css */
-
 .burger-overlay {
   position: fixed;
   top: 0;
-  /* Sağdan gəlməsi üçün right: 0; soldan gəlməsi üçün left: 0; istifadə edin */
-  left: 0; /* Məsələn, sağdan gəlsin */
-  width: 350px; /* Bütün səhifəni tutmasın, müəyyən bir eni olsun */
-  max-width: 80%; /* Daha kiçik ekranlarda adaptasiya üçün */
+  left: 0;
+  width: 350px;
+  max-width: 80%;
   height: 70%;
-  background-color: rgba(255, 255, 255, 0.9); /* Arxa fon biraz şəffaf olsun (90% ağ) */
-  box-shadow: -4px 0 10px rgba(0, 0, 0, 0.1); /* Kölgə əlavə edirik */
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: -4px 0 10px rgba(0, 0, 0, 0.1);
   z-index: 1000;
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* İçərisindəki məzmun sola doğru hizalansın */
+  align-items: flex-start;
   padding: 20px;
   box-sizing: border-box;
-
-  /* İlkin vəziyyət: ekranın kənarında gizli */
-  transform: translateX(100%); /* Sağdan gəlməsi üçün */
+  transform: translateX(100%);
   opacity: 0;
   visibility: hidden;
   transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out, visibility 0.3s;
 }
 
 .burger-overlay.open {
-  transform: translateX(0); /* Ekrana gəlsin */
+  transform: translateX(0);
   opacity: 1;
   visibility: visible;
 }
@@ -36,14 +31,13 @@
   font-size: 2.5rem;
   color: #333;
   cursor: pointer;
-  align-self: flex-end; /* Sağ üstdəki bağlama düyməsi */
+  align-self: flex-end;
   margin-bottom: 20px;
   padding: 0 10px;
 }
 
 .overlay-content {
   width: 100%;
-  /* max-width: 400px; Səhifənin özü 300px olduğu üçün buna ehtiyac yoxdur */
   margin-top: 20px;
 }
 
@@ -61,16 +55,16 @@
   gap: 25px;
 }
 
-.menu-categories li a { /* 'a' teqi 'span' ilə əvəz olunduğu üçün */
+.menu-categories li a {
   display: flex;
   align-items: center;
   padding: 12px 0;
-  text-decoration: none; /* Artıq link deyil, amma görünüşü saxlamaq üçün */
+  text-decoration: none;
   color: #333;
   font-size: 1.1rem;
   border-bottom: 1px solid #eee;
-  cursor: default; /* Link olmadığı üçün kursor pointer yox, default */
-  transition: background-color 0.2s ease; /* Hover effekti üçün */
+  cursor: default;
+  transition: background-color 0.2s ease;
 }
 
 .menu-categories li span:hover {
@@ -87,7 +81,7 @@
 .menu-categories li a {
   flex-grow: 1;
   text-decoration: none;
-  color:#333 ;
+  color:#333;
   cursor: pointer;
 }
 
@@ -98,10 +92,9 @@
   rotate: -90deg;
 }
 
-/* Kiçik ekranlar üçün responsive tənzimləmələr */
 @media (max-width: 480px) {
   .burger-overlay {
-    width: 90%; /* Çox kiçik ekranlarda daha çox yer tutsun */
+    width: 90%;
     padding: 15px;
   }
   .close-button {
@@ -116,4 +109,100 @@
     height: 20px;
     margin-right: 10px;
   }
+}
+
+/* ---- BU YENİ ƏLAVƏ OLUNAN STİLLƏRDİR ---- */
+
+/* Əsas content-i flex konteyner edirik ki, panellər yan-yana dursun */
+.overlay-content {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+/* Sol panel (əsas kateqoriyalar) */
+.main-categories-panel {
+  width: 300px; /* Panelin eni (istəyə görə dəyişə bilərsiniz) */
+  flex-shrink: 0; /* Panelin eninin kiçilməsinin qarşısını alır */
+  border-right: 1px solid #e0e0e0; /* Panellər arasında ayırıcı xətt */
+  overflow-y: auto; /* Kateqoriyalar çox olarsa, scroll yaransın */
+}
+
+/* Sağ panel (alt-kateqoriyalar) */
+.subcategory-panel {
+  flex-grow: 1; /* Qalan bütün boşluğu tutsun */
+  padding: 20px;
+  overflow-y: auto;
+}
+
+/* Alt-kateqoriya başlığı */
+.subcategory-title {
+  font-size: 1.2rem;
+  margin-top: 0;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+/* Alt-kateqoriya siyahısı */
+.subcategory-panel ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 15px;
+}
+
+.subcategory-panel li a {
+  display: block;
+  padding: 10px;
+  color: #333;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.2s ease;
+}
+
+.subcategory-panel li a:hover {
+  background-color: #f0f0f0;
+}
+
+
+/* ---- BU İSƏ MÖVCUD STİLLƏRƏ EDİLƏN DƏYİŞİKLİKLƏRDİR ---- */
+
+/* Əsas kateqoriya list-item-larına aid stillər */
+.menu-categories li {
+  /* Artıq burada position:relative və ya flex-wrap:wrap ehtiyac yoxdur */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+/* Aktiv olan kateqoriyanı fərqləndirmək üçün */
+.menu-categories li.active {
+  background-color: #f5f5f5;
+}
+
+.menu-categories li a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #333;
+  font-size: 1rem;
+}
+
+.menu-categories li a img {
+  margin-right: 15px;
+}
+
+.arrow-right {
+  transition: transform 0.3s ease;
+}
+
+/* Aktiv kateqoriyanın oxunu fırlatmaq (istəyə bağlı) */
+.menu-categories li.active .arrow-right {
+  transform: rotate(180deg);
+}
+
+.burger-overlay.wide {
+  width: 550px;
 }

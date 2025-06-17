@@ -91,20 +91,16 @@ import usta3 from '../assets/usta3.jpg';
 
 const Card = () => {
   return (
-    // Bütün elementləri saxlayan ümumi konteyner
     <section className="component-container">
       
-      {/* Sizin əlavə etdiyiniz yuxarı hissə (header) */}
       <div className="categories-hero">
-        <h2>Kateqoriyalar</h2>
-        {/* Inline style əvəzinə CSS class-ı istifadə etmək daha məsləhətlidir */}
+        <h2>Elanlar</h2>
         <a href="#" className="see-more-link">
           <span>Daha Çox</span>
           <img src={arrow} alt="arrow-right" className="arrow-icon" />
         </a>
       </div>
 
-      {/* Əvvəlki Kart Komponenti */}
       <div className="main-profiles">
       <div className="profile-card">
         <div className="card-image-container">
@@ -115,7 +111,6 @@ const Card = () => {
             <h2 className="card-title">Elektrik</h2>
             <p className="card-subtitle">Rəsul Quliyev</p>
             <div className="card-location">
-              {/* Location Pin SVG ikonu */}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="16"
@@ -135,7 +130,6 @@ const Card = () => {
             </div>
           </div>
           <div className="card-rating">
-            {/* Star SVG ikonu */}
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="20"
@@ -160,7 +154,6 @@ const Card = () => {
             <h2 className="card-title">Elektrik</h2>
             <p className="card-subtitle">Rəsul Quliyev</p>
             <div className="card-location">
-              {/* Location Pin SVG ikonu */}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="16"
@@ -180,7 +173,6 @@ const Card = () => {
             </div>
           </div>
           <div className="card-rating">
-            {/* Star SVG ikonu */}
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="20"

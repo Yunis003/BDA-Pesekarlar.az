@@ -54,7 +54,7 @@ const Comments = () => {
         <section className="testimonial-section">
             <div className="testimonial-header">
                 <h2>Sizdən gələn rəylər</h2>
-                <p style={{ display: "flex", alignItems:"center", gap:"10px" }}>Daha Cox <img src={arrow} alt="arrow-right" style={{ rotate:"-90deg", width:"20px" }} /></p>
+                {/* <p style={{ display: "flex", alignItems:"center", gap:"10px" }}>Daha Cox <img src={arrow} alt="arrow-right" style={{ rotate:"-90deg", width:"20px" }} /></p> */}
             </div>
             <div className="carousel-container">
                 <div className="carousel-track">
