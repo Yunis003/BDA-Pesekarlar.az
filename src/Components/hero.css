@@ -28,6 +28,7 @@
     background-image: url('../assets/Hero.png');
     background-repeat: no-repeat;
     background-size: cover;
+    padding-left: 7%;
 }
 
 .hero-content {
@@ -57,10 +58,10 @@
 }
 
 .hero-content p {
-    font-size: 1.3rem;
+    font-size: 1.28rem;
     margin-bottom: 25px;
     max-width: 490px;
-    color: black;
+    color: #404653;
     text-shadow: none;
 }
 

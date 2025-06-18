@@ -118,11 +118,9 @@ function BurgerMenu({ isOpen, onClose }) {
 
   // Kateqoriyaya kliklədikdə işə düşən funksiya
   const handleCategoryClick = (key) => {
-    // Əgər eyni kateqoriyaya təkrar klikləsək, sağ paneli bağlayırıq
     if (activeCategoryKey === key) {
       setActiveCategoryKey(null);
     } else {
-      // Əks halda, kliklənən kateqoriyanı aktiv edirik
       setActiveCategoryKey(key);
     }
   };
@@ -155,16 +153,13 @@ function BurgerMenu({ isOpen, onClose }) {
           </ul>
         </div>
 
-        {/* SAĞ PANEL: Alt-kateqoriyalar (yalnız aktiv kateqoriya olanda görünür) */}
         {activeCategoryKey && (
           <div className="subcategory-panel">
-            <h3 className="subcategory-title">
-              {categoriesData[activeCategoryKey].name}
-            </h3>
             <ul>
               {categoriesData[activeCategoryKey].subcategories.map((sub, index) => (
                 <li key={index}>
                   <a href="#">{sub}</a>
+                  <img src={arrow} alt="arrow-right" style={{rotate:"-90deg"}} />
                 </li>
               ))}
             </ul>
