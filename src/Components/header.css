@@ -206,3 +206,52 @@
         padding: 8px 10px;
     }
 }
+
+
+/* header.css faylınıza bunu əlavə edin */
+
+/* Wrapper üçün bu stil vacibdir ki, dropdown onun daxilində qalsın. */
+.city-selector-wrapper {
+  position: relative;
+}
+
+/* Dropdown-un özü. position: absolute onu digər elementlərin üstündə göstərir. */
+.city-dropdown {
+  position: absolute;
+  top: 100%; /* Input-un dərhal altında başlasın */
+  left: 0;
+  width: 100%; /* Valideyni qədər geniş olsun */
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-top: 5px;
+  max-height: 250px; /* Maksimum hündürlük */
+  overflow-y: auto;  /* Çox şəhər olanda scroll çıxsın */
+  z-index: 1000;     /* Bütün elementlərin önündə görünsün */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Kölgə effekti */
+}
+
+/* Dropdown-dakı hər bir şəhər elementi */
+.city-item {
+  padding: 12px 15px; /* Daxili boşluq */
+  cursor: pointer;      /* Üstünə gələndə əl işarəsi olsun */
+  font-size: 15px;
+}
+
+/* Elementin üstünə gələndə arxa fonu dəyişsin */
+.city-item:hover {
+  background-color: #f5f5f5;
+}
+
+/* Şəhər axtarışı üçün olan input-un stilləri */
+.city-selector-wrapper .city-input {
+  border: none;
+  outline: none;
+  width: 100%;
+  background: transparent;
+}
+
+/* Ox işarəsinə klikləmək olduğunu bildirmək üçün */
+.city-selector-wrapper > img {
+    cursor: pointer;
+}

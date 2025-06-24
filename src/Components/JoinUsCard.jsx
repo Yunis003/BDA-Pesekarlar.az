@@ -12,7 +12,7 @@ const JoinUsCard = () => {
             Yüzlərlə peşəkar sırasına sən də qoşul!
           </p>
           <div className="join-us-form">
-            <input type="number" placeholder="Nömrəni qeyd et" maxLength={10}  />
+            <input placeholder="Nömrəni qeyd et" maxLength={10} value="+994"/>
             <button>Qeydiyyatdan keç</button>
           </div>
         </div>
