@@ -213,6 +213,7 @@
 /* Wrapper üçün bu stil vacibdir ki, dropdown onun daxilində qalsın. */
 .city-selector-wrapper {
   position: relative;
+  background-color: #FFF;
 }
 
 /* Dropdown-un özü. position: absolute onu digər elementlərin üstündə göstərir. */
@@ -228,7 +229,6 @@
   max-height: 250px; /* Maksimum hündürlük */
   overflow-y: auto;  /* Çox şəhər olanda scroll çıxsın */
   z-index: 1000;     /* Bütün elementlərin önündə görünsün */
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Kölgə effekti */
 }
 
 /* Dropdown-dakı hər bir şəhər elementi */
@@ -248,7 +248,7 @@
   border: none;
   outline: none;
   width: 100%;
-  background: transparent;
+  background-color: #FFF;
 }
 
 /* Ox işarəsinə klikləmək olduğunu bildirmək üçün */

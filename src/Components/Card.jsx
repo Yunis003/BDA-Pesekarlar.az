@@ -520,7 +520,7 @@ import arrow from '../assets/arrow-down.svg';
 import { useState, useEffect } from 'react';
 
 // API-nin əsas ünvanı (şəkillər üçün)
-const API_BASE_URL = 'https://masters-1.onrender.com';
+const API_BASE_URL = 'https://api.peshekar.online';
 
 const Card = () => {
   
@@ -557,16 +557,16 @@ const Card = () => {
             <div className="card-image-container">
               
               <img 
-                src={card.profile_image ? `${API_BASE_URL}${card.profile_image}` : 'https://via.placeholder.com/150'} // null olarsa, standart şəkil
-                alt={`${card.first_name} ${card.last_name}`} 
+                src={card.profile_image ? `${API_BASE_URL}${card.profile_image}` : ''} // null olarsa, standart şəkil
+                alt={`${card.full_name}`} 
                 className="card-image" 
               />
             </div>
             <div className="card-content">
               <div className="card-info">
               
-                <h2 className="card-title">{card.custom_profession || 'Mütəxəssis'}</h2>
-                <p className="card-subtitle">{`${card.first_name} ${card.last_name}`}</p>
+                <h2 className="card-title">{card.profession_speciality || 'Mütəxəssis'}</h2>
+                <p className="card-subtitle">{`${card.full_name}`}</p>
                 <div className="card-location">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"

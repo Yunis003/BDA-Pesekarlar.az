@@ -1,16 +1,17 @@
 .burger-overlay {
   position: fixed;
-  top: 0;
+  top: 8%;
   left: 0;
   width: 350px;
   max-width: 80%;
-  height: 70%;
+  height: max-content;
   background-color: white;
   box-shadow: -4px 0 10px rgba(0, 0, 0, 0.1);
   z-index: 1000;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: center;
   padding: 20px;
   box-sizing: border-box;
   transform: translateX(100%);

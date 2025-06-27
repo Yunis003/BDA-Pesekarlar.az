@@ -26,7 +26,7 @@ const Categories = () => {
     const fetchCategories = async () => {
       try {
         const response = await fetch(
-          "https://masters-1.onrender.com/api/v1/services/"
+          "https://api.peshekar.online/api/v1/categories/"
         );
         const data = await response.json();
         
